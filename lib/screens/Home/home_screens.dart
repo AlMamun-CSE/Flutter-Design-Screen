@@ -108,28 +108,45 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   children: [
                     Expanded(
-                      flex:1,
+                      flex: 1,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          margin: const EdgeInsets.only(top: 10.0,),
+                          margin: const EdgeInsets.only(
+                            top: 10.0,
+                          ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children:  [
+                            children: [
                               const Text(
                                 "60% off",
-                                style: TextStyle(color: Colors.white, fontSize: 26,fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(height: 10,),
+                              SizedBox(
+                                height: 10,
+                              ),
                               Text(
                                 "17 October.October 20",
-                                style: TextStyle(color: Colors.white,fontSize:14),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 14),
                               ),
-                              SizedBox(height: 10,),
+                              SizedBox(
+                                height: 10,
+                              ),
                               Container(
                                 margin: const EdgeInsets.only(top: 5),
-                                child: Center(child: Text("Join GYM",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
-                                height:28,
+                                child: Center(
+                                  child: Text(
+                                    "Join GYM",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                height: 28,
                                 width: 90,
                                 decoration: BoxDecoration(
                                   color: Colors.deepOrange[500],
@@ -141,7 +158,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    Image.asset("assets/images/women.png",),
+                    Image.asset(
+                      "assets/images/women.png",
+                    ),
                   ],
                 ),
                 height: 180,
@@ -203,62 +222,68 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: result.imageBackgroundColor),
                           ),
                           Expanded(
-                              child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                result.courseTitle,
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              const SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                "${result.courseHour} hours ${result.courseMinite} minutes",
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black54),
-                              ),
-                              const SizedBox(
-                                height: 5,
-                              ),
-                              Row(
-                                children: [
-                                  RatingBarIndicator(
-                                    rating: result.courseRating,
-                                    itemBuilder: (context, index) => const Icon(
-                                      Icons.star,
-                                      color: Colors.amber,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  result.courseTitle,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "${result.courseHour} hours ${result.courseMinite} minutes",
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black54),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    RatingBarIndicator(
+                                      rating: result.courseRating,
+                                      itemBuilder: (context, index) =>
+                                          const Icon(
+                                        Icons.star,
+                                        color: Colors.amber,
+                                      ),
+                                      itemCount: 5,
+                                      itemSize: 10.0,
+                                      direction: Axis.horizontal,
                                     ),
-                                    itemCount: 5,
-                                    itemSize: 10.0,
-                                    direction: Axis.horizontal,
-                                  ),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    "${result.courseReviewCount} Review",
-                                    style: const TextStyle(color: Colors.grey),
-                                  ),
-                                  Expanded(
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      "${result.courseReviewCount} Review",
+                                      style:
+                                          const TextStyle(color: Colors.grey),
+                                    ),
+                                    
+                                    Expanded(
                                       child: Align(
-                                    alignment: Alignment.centerRight,
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10),
-                                      child: Text(
-                                        "\$${result.coursePrice}",
-                                        style:
-                                            const TextStyle(color: Colors.pink),
+                                        alignment: Alignment.centerRight,
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          child: Text(
+                                            "\$${result.coursePrice}",
+                                            style: const TextStyle(
+                                                color: Colors.pink),
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ))
-                                ],
-                              ),
-                            ],
-                          ))
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     );
